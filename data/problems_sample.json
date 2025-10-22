@@ -1,0 +1,555 @@
+[
+  {
+    "platform": "Codeforces",
+    "title": "2162H. Beautiful Problem",
+    "url": "https://codeforces.com/problemset/problem/2162/H",
+    "difficulty": "N/A",
+    "tags": [
+      "dp"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162G. Beautiful Tree",
+    "url": "https://codeforces.com/problemset/problem/2162/G",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "probabilities",
+      "trees"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162F. Beautiful Intervals",
+    "url": "https://codeforces.com/problemset/problem/2162/F",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162E. Beautiful Palindromes",
+    "url": "https://codeforces.com/problemset/problem/2162/E",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "schedules"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162D. Beautiful Permutation",
+    "url": "https://codeforces.com/problemset/problem/2162/D",
+    "difficulty": "N/A",
+    "tags": [
+      "binary search",
+      "interactive"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162C. Beautiful XOR",
+    "url": "https://codeforces.com/problemset/problem/2162/C",
+    "difficulty": "N/A",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162B. Beautiful String",
+    "url": "https://codeforces.com/problemset/problem/2162/B",
+    "difficulty": "N/A",
+    "tags": [
+      "brute force",
+      "constructive algorithms"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2162A. Beautiful Average",
+    "url": "https://codeforces.com/problemset/problem/2162/A",
+    "difficulty": "N/A",
+    "tags": [
+      "brute force",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2160C. Reverse XOR",
+    "url": "https://codeforces.com/problemset/problem/2160/C",
+    "difficulty": "N/A",
+    "tags": [
+      "bitmasks"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2160B. Distinct Elements",
+    "url": "https://codeforces.com/problemset/problem/2160/B",
+    "difficulty": "N/A",
+    "tags": [
+      "greedy",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2160A. MEX Partition",
+    "url": "https://codeforces.com/problemset/problem/2160/A",
+    "difficulty": "N/A",
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159F. Grand Finale: Snakes",
+    "url": "https://codeforces.com/problemset/problem/2159/F",
+    "difficulty": "N/A",
+    "tags": [
+      "binary search",
+      "interactive",
+      "ternary search"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159E. Super-Short-Polynomial-San",
+    "url": "https://codeforces.com/problemset/problem/2159/E",
+    "difficulty": "N/A",
+    "tags": [
+      "math",
+      "meet-in-the-middle"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159D2. Inverse Minimum Partition (Hard Version)",
+    "url": "https://codeforces.com/problemset/problem/2159/D2",
+    "difficulty": "N/A",
+    "tags": [
+      "dp",
+      "greedy",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159D1. Inverse Minimum Partition (Easy Version)",
+    "url": "https://codeforces.com/problemset/problem/2159/D1",
+    "difficulty": "N/A",
+    "tags": [
+      "binary search",
+      "brute force",
+      "dp",
+      "geometry",
+      "greedy",
+      "math",
+      "two pointers"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159C. Twin Polynomials",
+    "url": "https://codeforces.com/problemset/problem/2159/C",
+    "difficulty": "N/A",
+    "tags": [
+      "combinatorics",
+      "graph matchings",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159B. Rectangles",
+    "url": "https://codeforces.com/problemset/problem/2159/B",
+    "difficulty": "N/A",
+    "tags": [
+      "brute force",
+      "data structures",
+      "dp",
+      "dsu",
+      "greedy",
+      "implementation",
+      "two pointers"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2159A. MAD Interactive Problem",
+    "url": "https://codeforces.com/problemset/problem/2159/A",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "interactive"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2155F. Juan's Colorful Tree",
+    "url": "https://codeforces.com/problemset/problem/2155/F",
+    "difficulty": 2800,
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "graphs",
+      "meet-in-the-middle",
+      "trees"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2155E. Mimo & Yuyu",
+    "url": "https://codeforces.com/problemset/problem/2155/E",
+    "difficulty": 2200,
+    "tags": [
+      "games",
+      "greedy",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2155D. Batteries",
+    "url": "https://codeforces.com/problemset/problem/2155/D",
+    "difficulty": 1800,
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "graph matchings",
+      "graphs",
+      "interactive",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2155C. The Ancient Wizards' Capes",
+    "url": "https://codeforces.com/problemset/problem/2155/C",
+    "difficulty": 1500,
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2155B. Abraham's Great Escape",
+    "url": "https://codeforces.com/problemset/problem/2155/B",
+    "difficulty": 1100,
+    "tags": [
+      "constructive algorithms",
+      "graphs"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2155A. El fucho",
+    "url": "https://codeforces.com/problemset/problem/2155/A",
+    "difficulty": 800,
+    "tags": [
+      "implementation",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154F2. Bombing (Hard Version)",
+    "url": "https://codeforces.com/problemset/problem/2154/F2",
+    "difficulty": "N/A",
+    "tags": [
+      "combinatorics",
+      "dp"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154F1. Bombing (Easy Version)",
+    "url": "https://codeforces.com/problemset/problem/2154/F1",
+    "difficulty": "N/A",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "constructive algorithms"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154E. No Mind To Think",
+    "url": "https://codeforces.com/problemset/problem/2154/E",
+    "difficulty": "N/A",
+    "tags": [
+      "binary search",
+      "greedy",
+      "sortings",
+      "ternary search",
+      "two pointers"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154D. Catshock",
+    "url": "https://codeforces.com/problemset/problem/2154/D",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "trees"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154C2. No Cost Too Great (Hard Version)",
+    "url": "https://codeforces.com/problemset/problem/2154/C2",
+    "difficulty": "N/A",
+    "tags": [
+      "greedy",
+      "math",
+      "number theory"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154C1. No Cost Too Great (Easy Version)",
+    "url": "https://codeforces.com/problemset/problem/2154/C1",
+    "difficulty": "N/A",
+    "tags": [
+      "greedy",
+      "implementation",
+      "math",
+      "number theory"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154B. Make it Zigzag",
+    "url": "https://codeforces.com/problemset/problem/2154/B",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2154A. Notelock",
+    "url": "https://codeforces.com/problemset/problem/2154/A",
+    "difficulty": "N/A",
+    "tags": [
+      "greedy",
+      "two pointers"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2153F. Odd Queries on Odd Array",
+    "url": "https://codeforces.com/problemset/problem/2153/F",
+    "difficulty": "N/A",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "data structures",
+      "implementation",
+      "trees"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2153E. Zero Trailing Factorial",
+    "url": "https://codeforces.com/problemset/problem/2153/E",
+    "difficulty": "N/A",
+    "tags": [
+      "brute force",
+      "math",
+      "number theory"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2153D. Not Alone",
+    "url": "https://codeforces.com/problemset/problem/2153/D",
+    "difficulty": "N/A",
+    "tags": [
+      "dp",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2153C. Symmetrical Polygons",
+    "url": "https://codeforces.com/problemset/problem/2153/C",
+    "difficulty": "N/A",
+    "tags": [
+      "constructive algorithms",
+      "geometry",
+      "greedy",
+      "implementation",
+      "sortings"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2153B. Bitwise Reversion",
+    "url": "https://codeforces.com/problemset/problem/2153/B",
+    "difficulty": "N/A",
+    "tags": [
+      "bitmasks",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2153A. Circle of Apple Trees",
+    "url": "https://codeforces.com/problemset/problem/2153/A",
+    "difficulty": "N/A",
+    "tags": [
+      "greedy",
+      "sortings"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152H2. Victorious Coloring (Hard Version)",
+    "url": "https://codeforces.com/problemset/problem/2152/H2",
+    "difficulty": 3500,
+    "tags": [
+      "data structures",
+      "greedy",
+      "schedules"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152H1. Victorious Coloring (Easy Version)",
+    "url": "https://codeforces.com/problemset/problem/2152/H1",
+    "difficulty": 2900,
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152G. Query Jungle",
+    "url": "https://codeforces.com/problemset/problem/2152/G",
+    "difficulty": 2900,
+    "tags": [
+      "data structures",
+      "implementation",
+      "math",
+      "matrices",
+      "trees"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152F. Triple Attack",
+    "url": "https://codeforces.com/problemset/problem/2152/F",
+    "difficulty": 2500,
+    "tags": [
+      "data structures",
+      "greedy"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152E. Monotone Subsequence",
+    "url": "https://codeforces.com/problemset/problem/2152/E",
+    "difficulty": 2100,
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "greedy",
+      "interactive",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152D. Division Versus Addition",
+    "url": "https://codeforces.com/problemset/problem/2152/D",
+    "difficulty": 1700,
+    "tags": [
+      "games",
+      "greedy",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152C. Triple Removal",
+    "url": "https://codeforces.com/problemset/problem/2152/C",
+    "difficulty": 1400,
+    "tags": [
+      "data structures",
+      "greedy",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152B. Catching the Krug",
+    "url": "https://codeforces.com/problemset/problem/2152/B",
+    "difficulty": 1300,
+    "tags": [
+      "games"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2152A. Increase or Smash",
+    "url": "https://codeforces.com/problemset/problem/2152/A",
+    "difficulty": 800,
+    "tags": [
+      "greedy",
+      "implementation"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2151C. Incremental Stay",
+    "url": "https://codeforces.com/problemset/problem/2151/C",
+    "difficulty": 1400,
+    "tags": [
+      "greedy",
+      "implementation",
+      "math"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2151A. Incremental Subarray",
+    "url": "https://codeforces.com/problemset/problem/2151/A",
+    "difficulty": 800,
+    "tags": [
+      "math",
+      "strings"
+    ]
+  },
+  {
+    "platform": "Codeforces",
+    "title": "2150G. Counting Is Fun: The Finale",
+    "url": "https://codeforces.com/problemset/problem/2150/G",
+    "difficulty": 3500,
+    "tags": [
+      "combinatorics",
+      "implementation"
+    ]
+  }
+]
