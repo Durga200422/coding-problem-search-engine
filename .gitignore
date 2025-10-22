@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+
+# Data files (optional, but good if the file gets very large)
+# For now, we will comment this out to commit our initial data
+# /data/problems.json
+
+# OS files
+.DS_Store
+Thumbs.db
