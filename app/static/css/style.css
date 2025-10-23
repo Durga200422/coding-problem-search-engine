@@ -865,3 +865,68 @@ body.light-theme .hero {
 body.light-theme .problem-card {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+.subtitle {
+    text-align: center;
+    color: #71778c;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.statistics-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fc;
+    border-radius: 12px;
+}
+
+.stats-title {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+    color: #36394f;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.1);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #5863f8;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #71778c;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    font-size: 0.9rem;
+    color: #36394f;
+    padding: 5px 0;
+    border-bottom: 1px solid #e8eaf0;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-item b {
+    color: #5863f8;
+    float: right;
+}
+

@@ -6,6 +6,7 @@ const itemsPerPage = 12;
 let allResults = [];
 let charts = {};
 
+
 // ===== INITIALIZE =====
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSearchHistory();
     initializeTagCloud();
 });
+
 
 // ===== EVENT LISTENERS =====
 function initializeEventListeners() {
@@ -30,6 +32,7 @@ function initializeEventListeners() {
     });
 }
 
+
 // ===== THEME MANAGEMENT =====
 function initializeTheme() {
     const themeToggle = document.getElementById('themeToggle');
@@ -43,6 +46,7 @@ function initializeTheme() {
     }
 }
 
+
 function toggleTheme() {
     const isLight = document.body.classList.toggle('light-theme');
     const theme = isLight ? 'light' : 'dark';
@@ -50,12 +54,14 @@ function toggleTheme() {
     updateThemeIcon(theme);
 }
 
+
 function updateThemeIcon(theme) {
     const icon = document.querySelector('#themeToggle i');
     if (icon) {
         icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
     }
 }
+
 
 // ===== TAG FILTER MANAGEMENT =====
 async function initializeTagFilters() {
@@ -70,6 +76,7 @@ async function initializeTagFilters() {
         console.error('Failed to load tags:', error);
     }
 }
+
 
 function renderTagFilters(tags) {
     const container = document.getElementById('tagFilters');
@@ -92,6 +99,7 @@ function renderTagFilters(tags) {
     }
 }
 
+
 function toggleTagFilter(chip) {
     const tag = chip.dataset.tag;
     chip.classList.toggle('active');
@@ -108,6 +116,7 @@ function toggleTagFilter(chip) {
     }
 }
 
+
 function clearAllTags() {
     selectedTags = [];
     document.querySelectorAll('.tag-filter-chip').forEach(chip => {
@@ -119,6 +128,7 @@ function clearAllTags() {
         clearBtn.classList.add('hidden');
     }
 }
+
 
 // ===== SEARCH HISTORY MANAGEMENT =====
 function initializeSearchHistory() {
@@ -135,6 +145,7 @@ function initializeSearchHistory() {
         }, 200);
     });
 }
+
 
 function showSearchHistory() {
     const history = getSearchHistory();
@@ -168,6 +179,7 @@ function showSearchHistory() {
     historyContainer.classList.remove('hidden');
 }
 
+
 function hideSearchHistory() {
     const historyContainer = document.getElementById('searchHistory');
     if (historyContainer) {
@@ -175,10 +187,12 @@ function hideSearchHistory() {
     }
 }
 
+
 function getSearchHistory() {
     const history = localStorage.getItem('searchHistory');
     return history ? JSON.parse(history) : [];
 }
+
 
 function saveSearchToHistory(query, platform, difficulty) {
     const history = getSearchHistory();
@@ -203,10 +217,12 @@ function saveSearchToHistory(query, platform, difficulty) {
     localStorage.setItem('searchHistory', JSON.stringify(history));
 }
 
+
 function clearSearchHistory() {
     localStorage.setItem('searchHistory', JSON.stringify([]));
     showSearchHistory();
 }
+
 
 function applyHistorySearch(query, platform, difficulty) {
     document.getElementById('query').value = query;
@@ -215,6 +231,7 @@ function applyHistorySearch(query, platform, difficulty) {
     
     document.getElementById('searchForm').dispatchEvent(new Event('submit'));
 }
+
 
 function getTimeAgo(date) {
     const seconds = Math.floor((new Date() - date) / 1000);
@@ -227,6 +244,7 @@ function getTimeAgo(date) {
     const days = Math.floor(hours / 24);
     return `${days}d ago`;
 }
+
 
 // ===== TAG CLOUD =====
 async function initializeTagCloud() {
@@ -241,6 +259,7 @@ async function initializeTagCloud() {
         console.error('Failed to load tag cloud:', error);
     }
 }
+
 
 function renderTagCloud(tags) {
     const container = document.getElementById('tagCloud');
@@ -266,6 +285,7 @@ function renderTagCloud(tags) {
     `).join('');
 }
 
+
 function searchByTag(tag) {
     document.getElementById('query').value = tag;
     window.scrollTo({ top: document.querySelector('.search-section').offsetTop - 100, behavior: 'smooth' });
@@ -274,6 +294,7 @@ function searchByTag(tag) {
         document.getElementById('searchForm').dispatchEvent(new Event('submit'));
     }, 500);
 }
+
 
 // ===== SEARCH HANDLER =====
 async function handleSearch(e) {
@@ -330,6 +351,7 @@ async function handleSearch(e) {
     }
 }
 
+
 // ===== SORT RESULTS =====
 function sortResults(results, sortBy) {
     const sorted = [...results];
@@ -352,6 +374,7 @@ function sortResults(results, sortBy) {
     }
 }
 
+
 function parseDifficulty(diff) {
     if (diff === 'N/A' || !diff) return 0;
     if (typeof diff === 'number') return diff;
@@ -359,6 +382,7 @@ function parseDifficulty(diff) {
     const levels = { 'easy': 1, 'medium': 2, 'hard': 3 };
     return levels[diff.toLowerCase()] || 0;
 }
+
 
 // ===== DISPLAY RESULTS =====
 function displayResults(results, searchTime) {
@@ -377,9 +401,12 @@ function displayResults(results, searchTime) {
     const exportSection = document.getElementById('exportSection');
     if (exportSection) exportSection.classList.remove('hidden');
     
+    // Display statistics with the new function
     displayStatistics(results);
+    
     renderPage();
 }
+
 
 function renderPage() {
     const resultsContainer = document.getElementById('results');
@@ -400,6 +427,7 @@ function renderPage() {
     resultsContainer.classList.remove('hidden');
     scrollToTop();
 }
+
 
 function renderPagination() {
     const totalPages = Math.ceil(allResults.length / itemsPerPage);
@@ -430,6 +458,7 @@ function renderPagination() {
     resultsContainer.insertAdjacentHTML('afterend', paginationHTML);
 }
 
+
 function changePage(page) {
     const totalPages = Math.ceil(allResults.length / itemsPerPage);
     if (page < 1 || page > totalPages) return;
@@ -442,9 +471,11 @@ function changePage(page) {
     renderPage();
 }
 
+
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 
 // ===== CREATE PROBLEM CARD =====
 function createProblemCard(problem) {
@@ -496,24 +527,111 @@ function createProblemCard(problem) {
     return card;
 }
 
-// ===== STATISTICS DASHBOARD =====
+
+// ===== STATISTICS DASHBOARD (NEW IMPLEMENTATION) =====
 function displayStatistics(results) {
-    const statsSection = document.getElementById('statsSection');
+    const statsSection = document.getElementById('statistics');
     if (!statsSection) return;
     
-    statsSection.classList.remove('hidden');
+    statsSection.style.display = 'block';
+    
+    // Calculate statistics
+    const stats = calculateStatistics(results);
+    
+    // Display in cards
+    displayStatisticsCards(stats);
+    
+    // If Chart.js is available, also show charts
+    if (typeof Chart !== 'undefined') {
+        displayCharts(results);
+    }
+}
+
+
+function calculateStatistics(results) {
+    const stats = {
+        total: results.length,
+        byPlatform: {},
+        byDifficulty: {},
+        totalTags: new Set()
+    };
+    
+    results.forEach(problem => {
+        // Count by platform
+        stats.byPlatform[problem.platform] = (stats.byPlatform[problem.platform] || 0) + 1;
+        
+        // Count by difficulty
+        const diff = problem.difficulty || 'N/A';
+        stats.byDifficulty[diff] = (stats.byDifficulty[diff] || 0) + 1;
+        
+        // Collect unique tags
+        if (problem.tags) {
+            problem.tags.forEach(tag => stats.totalTags.add(tag));
+        }
+    });
+    
+    return stats;
+}
+
+
+function displayStatisticsCards(stats) {
+    // Total Results Card
+    const totalCard = document.getElementById('stat-total');
+    if (totalCard) {
+        totalCard.innerHTML = `
+            <div class="stat-number">${stats.total}</div>
+            <div class="stat-label">Total Results</div>
+        `;
+    }
+    
+    // Platform Breakdown Card
+    const platformCard = document.getElementById('stat-platforms');
+    if (platformCard) {
+        const platformHTML = Object.entries(stats.byPlatform)
+            .map(([platform, count]) => `
+                <div class="stat-item">
+                    <span>${platform}</span>
+                    <b>${count}</b>
+                </div>
+            `).join('');
+        
+        platformCard.innerHTML = `
+            <div class="stat-label">Platform Breakdown</div>
+            ${platformHTML}
+        `;
+    }
+    
+    // Difficulty Breakdown Card
+    const difficultyCard = document.getElementById('stat-difficulty');
+    if (difficultyCard) {
+        const difficultyHTML = Object.entries(stats.byDifficulty)
+            .slice(0, 5)  // Show top 5 difficulties
+            .map(([diff, count]) => `
+                <div class="stat-item">
+                    <span>${diff}</span>
+                    <b>${count}</b>
+                </div>
+            `).join('');
+        
+        difficultyCard.innerHTML = `
+            <div class="stat-label">Difficulty Distribution</div>
+            ${difficultyHTML}
+        `;
+    }
+}
+
+
+function displayCharts(results) {
+    const chartsSection = document.getElementById('statsSection');
+    if (!chartsSection) return;
+    
+    chartsSection.classList.remove('hidden');
     
     // Destroy old charts
     Object.values(charts).forEach(chart => {
         if (chart) chart.destroy();
     });
     charts = {};
-    
-    // Check if Chart.js is available
-    if (typeof Chart === 'undefined') {
-        console.warn('Chart.js not loaded. Statistics will not be displayed.');
-        return;
-    }
     
     // Difficulty distribution
     const difficultyData = getDifficultyDistribution(results);
@@ -536,6 +654,7 @@ function displayStatistics(results) {
         charts.tag = createChart('tagChart', 'Top 10 Tags', tagData, 'bar');
     }
 }
+
 
 function getDifficultyDistribution(results) {
     const distribution = {};
@@ -563,6 +682,7 @@ function getDifficultyDistribution(results) {
     };
 }
 
+
 function getPlatformDistribution(results) {
     const distribution = {};
     
@@ -576,6 +696,7 @@ function getPlatformDistribution(results) {
         data: Object.values(distribution)
     };
 }
+
 
 function getTopTags(results, limit = 10) {
     const tagCounts = {};
@@ -595,6 +716,7 @@ function getTopTags(results, limit = 10) {
         data: sorted.map(([, count]) => count)
     };
 }
+
 
 function createChart(canvasId, title, data, type) {
     const ctx = document.getElementById(canvasId);
@@ -662,6 +784,7 @@ function createChart(canvasId, title, data, type) {
     });
 }
 
+
 // ===== EXPORT FUNCTIONALITY =====
 function exportResults(format) {
     if (allResults.length === 0) {
@@ -685,6 +808,7 @@ function exportResults(format) {
     downloadFile(content, filename, mimeType);
 }
 
+
 function convertToCSV(data) {
     const headers = ['Title', 'Platform', 'Difficulty', 'URL', 'Tags'];
     const rows = data.map(prob => [
@@ -703,6 +827,7 @@ function convertToCSV(data) {
     return csvContent;
 }
 
+
 function downloadFile(content, filename, mimeType) {
     const blob = new Blob([content], { type: mimeType });
     const url = URL.createObjectURL(blob);
@@ -714,6 +839,7 @@ function downloadFile(content, filename, mimeType) {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 }
+
 
 // ===== BOOKMARK FUNCTIONALITY =====
 function toggleBookmark(event, url) {
@@ -733,16 +859,19 @@ function toggleBookmark(event, url) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
 
+
 function getBookmarks() {
     const bookmarks = localStorage.getItem('bookmarks');
     return bookmarks ? JSON.parse(bookmarks) : [];
 }
+
 
 function loadBookmarks() {
     if (!localStorage.getItem('bookmarks')) {
         localStorage.setItem('bookmarks', JSON.stringify([]));
     }
 }
+
 
 // ===== UTILITY FUNCTIONS =====
 function getDifficultyClass(difficulty) {
@@ -762,6 +891,7 @@ function getDifficultyClass(difficulty) {
     return '';
 }
 
+
 function escapeHtml(text) {
     const map = {
         '&': '&amp;',
@@ -773,15 +903,18 @@ function escapeHtml(text) {
     return String(text).replace(/[&<>"']/g, m => map[m]);
 }
 
+
 function showLoader() {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.remove('hidden');
 }
 
+
 function hideLoader() {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.add('hidden');
 }
+
 
 function showError(message) {
     const errorEl = document.getElementById('error');
@@ -790,29 +923,37 @@ function showError(message) {
     if (errorEl) errorEl.classList.remove('hidden');
 }
 
+
 function hideError() {
     const errorEl = document.getElementById('error');
     if (errorEl) errorEl.classList.add('hidden');
 }
+
 
 function showEmptyState() {
     const emptyState = document.getElementById('emptyState');
     if (emptyState) emptyState.classList.remove('hidden');
 }
 
+
 function hideEmptyState() {
     const emptyState = document.getElementById('emptyState');
     if (emptyState) emptyState.classList.add('hidden');
 }
+
 
 function hideResults() {
     const results = document.getElementById('results');
     const resultsMeta = document.getElementById('resultsMeta');
     const exportSection = document.getElementById('exportSection');
     const statsSection = document.getElementById('statsSection');
+    const statistics = document.getElementById('statistics');
     
     if (results) results.classList.add('hidden');
     if (resultsMeta) resultsMeta.classList.add('hidden');
     if (exportSection) exportSection.classList.add('hidden');
     if (statsSection) statsSection.classList.add('hidden');
+    if (statistics) statistics.style.display = 'none';
 }
+
+
