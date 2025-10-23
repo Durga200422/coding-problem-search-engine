@@ -2,7 +2,9 @@ from flask import Flask, request, jsonify, render_template
 from search_logic import load_problems, find_problems
 import os
 import logging
+import random
 from functools import lru_cache
+
 
 # Configure logging
 logging.basicConfig(
@@ -11,7 +13,29 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+
 app = Flask(__name__)
+
+
+# Motivational Quotes
+MOTIVATIONAL_QUOTES = [
+    {"text": "The expert in anything was once a beginner.", "author": "Helen Hayes"},
+    {"text": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House"},
+    {"text": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
+    {"text": "Learning to code is learning to create and innovate.", "author": "Codecademy"},
+    {"text": "Every expert was once a beginner. Never give up!", "author": "Anonymous"},
+    {"text": "The only way to learn a new programming language is by writing programs in it.", "author": "Dennis Ritchie"},
+    {"text": "Success is not final, failure is not fatal: it is the courage to continue that counts.", "author": "Winston Churchill"},
+    {"text": "Believe you can and you're halfway there.", "author": "Theodore Roosevelt"},
+    {"text": "Practice makes progress, not perfection.", "author": "Anonymous"},
+    {"text": "Debug your code, debug your life.", "author": "Anonymous"},
+    {"text": "The best way to predict the future is to implement it.", "author": "David Heinemeier Hansson"},
+    {"text": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler"},
+    {"text": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine"},
+    {"text": "The only limit to our realization of tomorrow is our doubts of today.", "author": "Franklin D. Roosevelt"},
+    {"text": "Don't watch the clock; do what it does. Keep going.", "author": "Sam Levenson"}
+]
+
 
 # Security headers
 @app.after_request
@@ -21,13 +45,14 @@ def add_security_headers(response):
     response.headers['X-XSS-Protection'] = '1; mode=block'
     return response
 
+
 # --- Load problems from all sources ---
 def load_all_problems():
     """Load problems from all available JSON files."""
     all_problems = []
     
     data_files = {
-        "Codeforces": "data/problems.json",
+        "Codeforces": "data/codeforces_problems.json",
         "LeetCode": "data/leetcode_problems.json",
         "CodeChef": "data/codechef_problems.json"
     }
@@ -50,18 +75,23 @@ def load_all_problems():
     
     return all_problems
 
+
 # Load problems at startup
 logger.info("🔄 Loading problem data from all platforms...")
 problems = load_all_problems()
 
+
 if not problems:
     logger.warning("⚠️  Running with empty dataset. Add data files to /data directory.")
+
 
 # --- Home Route ---
 @app.route("/")
 def home():
-    """Serve the main HTML page."""
-    return render_template("index.html")
+    """Serve the main HTML page with a motivational quote."""
+    daily_quote = random.choice(MOTIVATIONAL_QUOTES)
+    return render_template("index.html", quote=daily_quote)
+
 
 # --- API: Get Tags ---
 @app.route("/api/tags", methods=["GET"])
@@ -85,6 +115,7 @@ def api_tags():
     except Exception as e:
         logger.error(f"Error in /api/tags: {e}")
         return jsonify({"error": "Failed to fetch tags", "tags": []}), 500
+
 
 # --- API: Search Problems ---
 @app.route("/api/search", methods=["GET"])
@@ -159,6 +190,22 @@ def api_search():
             "results": []
         }), 500
 
+
+# --- API: Get Random Quote ---
+@app.route("/api/quote", methods=["GET"])
+def api_quote():
+    """Get a random motivational quote."""
+    try:
+        quote = random.choice(MOTIVATIONAL_QUOTES)
+        return jsonify(quote)
+    except Exception as e:
+        logger.error(f"Error in /api/quote: {e}")
+        return jsonify({
+            "text": "Keep coding, keep learning!",
+            "author": "Anonymous"
+        }), 500
+
+
 # --- API: Health Check ---
 @app.route("/api/health", methods=["GET"])
 def api_health():
@@ -169,6 +216,7 @@ def api_health():
         "version": "1.0.0"
     })
 
+
 # --- Error Handlers ---
 @app.errorhandler(404)
 def not_found(e):
@@ -177,11 +225,13 @@ def not_found(e):
         return jsonify({"error": "Endpoint not found"}), 404
     return render_template("index.html")  # Serve SPA for all non-API routes
 
+
 @app.errorhandler(500)
 def internal_error(e):
     """Handle 500 errors."""
     logger.error(f"Internal server error: {e}")
     return jsonify({"error": "Internal server error"}), 500
+
 
 # --- Start the Flask App ---
 if __name__ == "__main__":

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodeQuest - Discover and search 15,938+ coding problems from Codeforces, LeetCode, and CodeChef. Find your next coding challenge with advanced filters.">
     <meta name="keywords" content="coding problems, algorithms, data structures, competitive programming, leetcode, codeforces, codechef">
-    <meta name="author" content="CodeQuest">
+    <meta name="author" content="Narapureddy Durga Prasad Reddy">
     
     <title>CodeQuest - Find Your Next Coding Challenge</title>
     
@@ -32,7 +32,6 @@
         <i class="fas fa-moon"></i>
     </button>
 
-
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
@@ -43,6 +42,21 @@
         </div>
     </header>
 
+    <!-- 🎯 NEW: Motivational Quote Banner -->
+    <div class="container">
+        <div class="quote-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; margin: 20px auto; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 900px; animation: fadeIn 0.6s ease-in;">
+            <i class="fas fa-quote-left" style="font-size: 1.5em; opacity: 0.7; margin-bottom: 10px;"></i>
+            <p style="font-size: 1.3em; font-style: italic; margin: 15px 0; font-weight: 300; line-height: 1.6;">
+                "{{ quote.text }}"
+            </p>
+            <p style="font-size: 1em; opacity: 0.9; margin: 10px 0 0 0; font-weight: 500;">
+                — {{ quote.author }}
+            </p>
+            <button id="refreshQuote" style="margin-top: 15px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9em; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                <i class="fas fa-sync-alt"></i> New Quote
+            </button>
+        </div>
+    </div>
 
     <!-- Tag Cloud Section -->
     <section class="tag-cloud-section">
@@ -55,7 +69,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Main Container -->
     <main class="container">
@@ -114,7 +127,6 @@
                     </div>
                 </div>
 
-
                 <!-- Tag Filter Section -->
                 <div class="tag-filter-section">
                     <label class="tag-filter-label">
@@ -128,13 +140,11 @@
                     </button>
                 </div>
 
-
                 <button type="submit" class="search-btn">
                     <i class="fas fa-search"></i> Search Problems
                 </button>
             </form>
         </section>
-
 
         <!-- Export Section -->
         <div id="exportSection" class="export-section hidden" role="toolbar" aria-label="Export options">
@@ -146,7 +156,6 @@
             </button>
         </div>
 
-
         <!-- NEW: Simple Statistics Cards Section (Shows before charts) -->
         <div id="statistics" class="statistics-section" style="display: none;" role="region" aria-label="Quick statistics">
             <h3 class="stats-title"><i class="fas fa-chart-pie"></i> Result Statistics</h3>
@@ -156,7 +165,6 @@
                 <div class="stat-card" id="stat-difficulty"></div>
             </div>
         </div>
-
 
         <!-- Chart Statistics Section -->
         <div id="statsSection" class="stats-section hidden" role="region" aria-label="Detailed statistics charts">
@@ -174,13 +182,11 @@
             </div>
         </div>
 
-
         <!-- Results Meta -->
         <div id="resultsMeta" class="results-meta hidden" role="status" aria-live="polite">
             <span id="resultsCount" class="results-count"></span>
             <span id="searchTime" class="search-time"></span>
         </div>
-
 
         <!-- Loading State -->
         <div id="loader" class="loader hidden" role="status" aria-live="polite" aria-label="Loading results">
@@ -191,14 +197,12 @@
             </div>
         </div>
 
-
         <!-- Error State -->
         <div id="error" class="error-state hidden" role="alert" aria-live="assertive">
             <i class="fas fa-exclamation-circle"></i>
             <h3>Error</h3>
             <p id="errorMessage"></p>
         </div>
-
 
         <!-- Empty State -->
         <div id="emptyState" class="empty-state hidden" role="status">
@@ -207,19 +211,17 @@
             <p>Try adjusting your search criteria or filters</p>
         </div>
 
-
         <!-- Results Grid -->
         <div id="results" class="results-grid" role="list" aria-label="Search results">
             <!-- Dynamically populated by JavaScript -->
         </div>
     </main>
 
-
     <!-- Footer -->
     <footer class="footer">
         <p>Built with <i class="fas fa-heart" aria-label="love"></i> for coding enthusiasts</p>
         <div class="footer-links">
-            <a href="https://github.com/yourusername/codequest" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub">
+            <a href="https://github.com/Durga200422/coding-problem-search-engine" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub">
                 <i class="fab fa-github"></i> GitHub
             </a>
             <a href="#" aria-label="About CodeQuest">
@@ -228,8 +230,76 @@
         </div>
     </footer>
 
+    <!-- Developer Credit Footer -->
+    <footer style="text-align: center; padding: 20px; margin-top: 20px; border-top: 1px solid #ddd; opacity: 0.8; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <p style="margin: 10px 0; color: #000; font-weight: bold; font-size: 1.1em;">💻 Developed with ❤️ by <strong>Narapureddy Durga Prasad Reddy</strong></p>
+    <p style="font-size: 0.9em; color: #666; margin: 5px 0;">Empowering students to master coding challenges</p>
+    <div style="margin-top: 10px;">
+        <a href="https://github.com/Durga200422" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; margin: 0 10px;">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/narapureddy-d-2a5402252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+</footer>
+
 
     <!-- Custom JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <!-- 🎯 NEW: Quote Refresh Script -->
+    <script>
+        // Refresh quote button functionality
+        document.getElementById('refreshQuote')?.addEventListener('click', async function() {
+            const btn = this;
+            const icon = btn.querySelector('i');
+            
+            // Add spinning animation
+            icon.style.animation = 'spin 0.5s linear';
+            btn.disabled = true;
+            
+            try {
+                const response = await fetch('/api/quote');
+                const quote = await response.json();
+                
+                // Update quote with fade effect
+                const quoteBanner = document.querySelector('.quote-banner');
+                quoteBanner.style.opacity = '0.5';
+                
+                setTimeout(() => {
+                    document.querySelector('.quote-banner p:nth-of-type(1)').innerHTML = `"${quote.text}"`;
+                    document.querySelector('.quote-banner p:nth-of-type(2)').innerHTML = `— ${quote.author}`;
+                    quoteBanner.style.opacity = '1';
+                }, 300);
+                
+            } catch (error) {
+                console.error('Failed to fetch new quote:', error);
+            } finally {
+                setTimeout(() => {
+                    icon.style.animation = '';
+                    btn.disabled = false;
+                }, 500);
+            }
+        });
+        
+        // Add CSS animation for spinning icon
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .quote-banner {
+                transition: opacity 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
+
