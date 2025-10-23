@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from search_logic import load_problems, find_problems
+from app.search_logic import load_problems, find_problems
 import os
 import logging
 import random
