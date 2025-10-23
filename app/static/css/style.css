@@ -22,12 +22,27 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: var(--background);
     color: var(--text);
     line-height: 1.6;
     min-height: 100vh;
+}
+
+/* ===== ACCESSIBILITY ===== */
+*:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+.search-btn:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
 }
 
 /* ===== HERO SECTION ===== */
@@ -251,6 +266,7 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .problem-card::before {
@@ -415,7 +431,6 @@ body {
     border-top: 1px solid var(--border);
     color: var(--text-muted);
 }
-
 .footer i.fa-heart {
     color: #ef4444;
 }
@@ -486,9 +501,10 @@ body {
     .problem-meta {
         flex-direction: column;
         gap: 0.5rem;
-    
     }
-    /* ===== THEME TOGGLE ===== */
+} /* ✅ Fixed: Added missing closing brace */
+
+/* ===== THEME TOGGLE ===== */
 .theme-toggle {
     position: fixed;
     top: 1rem;
@@ -581,6 +597,7 @@ body {
     color: white;
     border-color: #ef4444;
 }
+
 /* ===== PAGINATION ===== */
 .pagination {
     display: flex;
@@ -705,6 +722,7 @@ body {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+
 /* ===== EXPORT SECTION ===== */
 .export-section {
     display: flex;
@@ -768,6 +786,7 @@ body {
 .stat-card canvas {
     max-height: 250px;
 }
+
 /* ===== TAG CLOUD SECTION ===== */
 .tag-cloud-section {
     background: var(--surface);
@@ -807,6 +826,7 @@ body {
     cursor: pointer;
     border: none;
     box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+    will-change: transform;
 }
 
 .tag-cloud-item:hover {
@@ -820,7 +840,6 @@ body {
 .tag-cloud-item.size-md { font-size: 1.15rem; }
 .tag-cloud-item.size-lg { font-size: 1.3rem; }
 .tag-cloud-item.size-xl { font-size: 1.5rem; }
-
 
 /* ===== LIGHT THEME ===== */
 body.light-theme {
@@ -845,6 +864,4 @@ body.light-theme .hero {
 
 body.light-theme .problem-card {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 }
