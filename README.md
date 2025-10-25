@@ -7,7 +7,7 @@ AI-powered search interface with intelligent problem recommendations
 ## 🎯 Overview
 CodeQuest is a comprehensive, AI-powered search engine designed for competitive programmers and coding enthusiasts. This full-stack application employs advanced web scraping techniques to aggregate coding problems from platforms like LeetCode, Codeforces, HackerRank, and more, while utilizing machine learning algorithms to provide intelligent search ranking and personalized problem recommendations.
 
-🌐 Live Demo: [https://codequest-search-engine.onrender.com](https://codequest-search-engine.onrender.com)
+🌐 Live Demo: [https://codequest-search-engine.onrender.com](https://codequest-search-engine.onrender.com/)
 
 ## Problem Statement
 Competitive programmers waste valuable time navigating multiple platforms to find relevant practice problems. CodeQuest solves this by creating a unified, intelligent search interface.
